@@ -1,0 +1,1 @@
+resource: https://documenter.getpostman.com/view/3085963/SzKN22op?version=latest#intro

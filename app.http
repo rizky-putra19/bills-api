@@ -1,0 +1,45 @@
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsImVtYWlsIjoid2FyZGFuYUBsb2thbHBheS5pZCIsIm5hbWUiOiIiLCJleHAiOjE2ODQ3NTgyMDR9.B0oAbmlQxQnVxen8sHZLR6yg9CUz6p262mGX5xFd0Qc
+
+### user register 
+POST http://localhost:9000/v1/register
+content-type: application/json
+
+{
+    "email": "wardana@lokalpay.id",
+    "password": "password"
+}
+
+### user auth
+POST http://localhost:9000/v1/login
+content-type: application/json
+
+{
+    "email": "wardana@lokalpay.id",
+    "password": "lokalpay"
+}
+
+### user profile
+GET http://localhost:9000/v1/profile
+content-type: application/json
+Authorization: Bearer {{token}}
+
+### catalog product
+GET http://localhost:9000/v1/list-product
+content-type: application/json
+
+### submit order
+POST http://localhost:9000/v1/order
+content-type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "product_id": 2,
+    "client_number": "0878785822222"
+}
+
+
+### fetch order
+GET http://localhost:9000/v1/order/1
+content-type: application/json
+Authorization: Bearer {{token}}
+
